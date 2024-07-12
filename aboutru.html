@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Грамотность PRO</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+        <link rel="stylesheet" href="med-web/style.css">
+
+    
+    </head>
+<body>
+    <header>
+
+        <div class="container">
+
+            <a href="#" class="logo"><span>Г</span>рамотность <span>P</span>ro</a>
+
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="aboutru.html">Тест</a></li>
+                    <li><a href="contactru.html">Контакты</a></li>
+                </ul>
+            </nav>
+
+            <div class="fas fa-bars"></div>
+
+        </div>
+
+    </header>
+
+   <br><br><br><br>
+
+
+   <section class="about" id="about">
+
+    <div class="container">
+
+        <div class="row min-vh-100 align-items-center">
+
+            <div class="col-md-6 content" data-aos="fade-right">
+
+                <div class="box">
+                    <h3> <i class="fa fa-address-book"></i> Индивидуальный подход </h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, suscipit.</p>
+                </div>
+                <br>
+                <div class="box">
+                    <h3> <i class="fa fa-thumbs-up"></i> Уникальная методика </h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, suscipit.</p>
+                </div>
+                <br>
+                <div class="box">
+                    <h3> <i class="fa fa-rocket"></i> Быстрые результаты</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, suscipit.</p>
+                </div>
+
+            </div>
+
+            <div class="col-md-6 d-none d-md-block"                        data-aos="fade-left">
+                <img src="images/img.png" width="100%" alt="">
+            </div>
+
+        </div>
+
+    </div>
+</section>
+    
+        </section>
+    
+        <!-- about section ends -->
+
+        <script>
+            function gradeQuiz() {
+    // Правильные ответы
+    const correctAnswers = [
+        'невзлюбить',
+        'Он знал, что экзамен будет трудным.',
+        'квартет',
+        'в течение',
+        'поллитровка',
+        'интересный',
+        'предлагаемый',
+        'потому',
+        'экстренный',
+        'рассмотреть'
+    ];
+    
+    let score = 0;
+    const totalQuestions = correctAnswers.length;
+    const userAnswers = [];
+    const resultsContainer = document.getElementById('results');
+    const scoreContainer = document.getElementById('score');
+    const answersContainer = document.getElementById('answers');
+
+    answersContainer.innerHTML = '';
+
+    for (let i = 1; i <= totalQuestions; i++) {
+        const userAnswer = document.querySelector(`input[name="q${i}"]:checked`);
+        if (userAnswer) {
+            userAnswers.push(userAnswer.value);
+            if (userAnswer.value === correctAnswers[i - 1]) {
+                score++;
+            }
+        } else {
+            userAnswers.push('Не отвечено');
+        }
+    }
+
+
+    scoreContainer.textContent = `Вы набрали ${score} из ${totalQuestions}`;
+    userAnswers.forEach((answer, index) => {
+        const li = document.createElement('li');
+        li.textContent = `Вопрос ${index + 1}: ${answer} (Правильный ответ: ${correctAnswers[index]})`;
+        answersContainer.appendChild(li);
+    });
+
+    resultsContainer.style.display = 'block';
+}
+
+        </script>
+
+ <!-- Викторина -->
+ <section class="quiz" id="quiz">
+    <div class="container">
+        <h1 class="heading">Викторина</h1>
+        <form id="quizForm">
+            <div class="box" data-aos="fade-right">
+                <h3>Вопрос 1: Как пишется слово "не(взлюбить)"?</h3>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q1" id="q1a" value="невзлюбить">
+                    <label class="form-check-label" for="q1a">невзлюбить</label>
+                </div>
+    
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q1" id="q1b" value="не взлюбить">
+                    <label class="form-check-label" for="q1b">не взлюбить</label>
+                </div>
+            </div>
+            <br>
+            <div class="box" data-aos="fade-up">
+                <h3>Вопрос 2: Как правильно поставить знаки препинания в предложении: "Он знал что экзамен будет трудным"?</h3>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q2" id="q2a" value="Он знал, что экзамен будет трудным.">
+                    <label class="form-check-label" for="q2a">Он знал, что экзамен будет трудным.</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q2" id="q2b" value="Он знал что, экзамен будет трудным.">
+                    <label class="form-check-label" for="q2b">Он знал что, экзамен будет трудным.</label>
+                </div>
+            </div>
+            <br>
+            <div class="box" data-aos="fade-left">
+                <h3>Вопрос 3: Какое слово является правильным: "квартет" или "квартетт"?</h3>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q3" id="q3a" value="квартет">
+                    <label class="form-check-label" for="q3a">квартет</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q3" id="q3b" value="квартетт">
+                    <label class="form-check-label" for="q3b">квартетт</label>
+                </div>
+            </div>
+            <br>
+            <div class="box" data-aos="fade-right">
+                <h3>Вопрос 4: Выберите правильный вариант: "в течении" или "в течение"?</h3>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q4" id="q4a" value="в течении">
+                    <label class="form-check-label" for="q4a">в течении</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q4" id="q4b" value="в течение">
+                    <label class="form-check-label" for="q4b">в течение</label>
+                </div>
+            </div>
+            <br>
+            <div class="box" data-aos="fade-up">
+                <h3>Вопрос 5: Как пишется слово "пол(литровка)"?</h3>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q5" id="q5a" value="поллитровка">
+                    <label class="form-check-label" for="q5a">поллитровка</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q5" id="q5b" value="пол литровка">
+                    <label class="form-check-label" for="q5b">пол литровка</label>
+                </div>
+            </div>
+            <br>
+            <div class="box" data-aos="fade-left">
+                <h3>Вопрос 6: Как правильно: "интерисный" или "интересный"?</h3>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q6" id="q6a" value="интерисный">
+                    <label class="form-check-label" for="q6a">интерисный</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q6" id="q6b" value="интересный">
+                    <label class="form-check-label" for="q6b">интересный</label>
+                </div>
+            </div>
+            <br>
+            <div class="box" data-aos="fade-right">
+                <h3>Вопрос 7: Выберите правильный вариант: "предлогаемый" или "предлагаемый"?</h3>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q7" id="q7a" value="предлогаемый">
+                    <label class="form-check-label" for="q7a">предлогаемый</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q7" id="q7b" value="предлагаемый">
+                    <label class="form-check-label" for="q7b">предлагаемый</label>
+                </div>
+            </div>
+            <br>
+            <div class="box" data-aos="fade-up">
+                <h3>Вопрос 8: Как пишется слово "по(тому)"?</h3>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q8" id="q8a" value="потому">
+                    <label class="form-check-label" for="q8a">потому</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q8" id="q8b" value="по тому">
+                    <label class="form-check-label" for="q8b">по тому</label>
+                </div>
+            </div>
+            <br>
+            <div class="box" data-aos="fade-left">
+                <h3>Вопрос 9: Выберите правильный вариант: "экстренный" или "экстренный"?</h3>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q9" id="q9a" value="экстренный">
+                    <label class="form-check-label" for="q9a">экстренный</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q9" id="q9b" value="экстерный">
+                    <label class="form-check-label" for="q9b">экстерный</label>
+                </div>
+            </div>
+            <br>
+            <div class="box" data-aos="fade-right">
+                <h3>Вопрос 10: Как правильно: "разсмотреть" или "рассмотреть"?</h3>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q10" id="q10a" value="разсмотреть">
+                    <label class="form-check-label" for="q10a">разсмотреть</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q10" id="q10b" value="рассмотреть">
+                    <label class="form-check-label" for="q10b">рассмотреть</label>
+                </div>
+            </div>
+            <br>
+            <input type="button" value="Проверить ответы" onclick="gradeQuiz()" class="btn">
+        </form>
+        <br>
+        <div id="results" class="box" data-aos="fade-up">
+            <h3>Ваши результаты:</h3>
+            <br>
+            <p id="score"></p>
+            <ul id="answers"></ul>
+        </div>
+    </div>
+    <br>
+</section>
+
+    <section class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4" data-aos="fade-right">
+                    <a href="#" class="logo"><span>Г</span>рамотность <span>P</span>ro</a>
+                    <p>Добро пожаловать в "Грамотность PRO" — образовательный центр, где каждый желающий может овладеть искусством грамотного владения русским языком.</p>
+                </div>
+                <div class="col-md-4 text-center" data-aos="fade-up">
+                    <h3>Ссылки</h3>
+                    <a href="index.html">Главная</a>
+                    <a href="aboutru.html">Тест</a>
+                    <a href="contactru.html">Контакты</a>
+                </div>
+                <div class="col-md-4 text-center" data-aos="fade-left">
+                    <h3>Поделиться</h3>
+                    <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://x.com/?lang=en" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/meiirkhan_shamurat?igsh=cm90amFqMGJtamF1" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/meiirkhan-shamurat-55359a2b4/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                    </div>
+                    </div>
+                    <h1 class="credit text-center mx-auto">2024 Meiirkhan Shamurat, Talgat Mustafinov, Alima Kassenkazy &copy</h1>
+                    </section>
+                    <!-- Конец секции футера -->
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="js/script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="med-web/script.js"></script>
+
+<script>
+    AOS.init({
+        duration: 1000,
+        delay: 400
+    });
+</script>
+</body>
+</html>
